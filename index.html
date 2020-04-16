@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta viewport, obligatoire pour la gestion du responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module header</title>
+</head>
+<body>
+    <!-- Début : Module header -->
+    <section class="header">
+        <div class="triangle">
+
+            <!-- Triangle du haut -->
+            <div class="top">
+                <!-- Image du triangle du haut -->
+                <img src="img/Logo.png" class="logo-header">
+            </div>
+
+
+            <!-- Lien triangle de gauche -->
+            <a href="#label">
+                <!-- Triangle de gauche -->
+                <div class="left">
+                    <!-- Texte triangle de gauche -->
+                    <span>Label</span>
+                </div>
+            </a>
+
+
+            <!-- Lien triangle de droite -->
+            <a href="#merch">
+                <!-- Triangle de droite -->
+                <div class="right">
+                    <!-- Texte triangle de droite -->
+                    <span>Merch printing</span>
+                </div>
+            </a>
+
+
+            <!-- Lien triangle du bas -->
+            <a href="#store">
+                <!-- Triangle de bas -->
+                <div class="bottom">
+                    <!-- Texte triangle du bas avec son image -->
+                    <span>Online Store <img src="img/clothes.png"/></span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+        <!-- Fin : Module header -->
+  <div>
+      BLABAL
+      
+  </div>
+        <style>
+        /* Début STYLE : Module Header */
+
+        /* Suppression des marges par défaut d'un site de base */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Couleur de l'arrière plan du header */
+        .header{
+            background-color: #000000;
+        }
+
+
+        /* Gestion des 4 triangles */
+        .triangle {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+        }
+
+        /* 
+        
+            Triangle du haut
+        
+        */
+        .triangle .top {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 0;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Position et taille du logo dans le triangle du haut */
+        .logo-header{
+            position: absolute;
+            /* Taille */
+            width: 40%;
+            /* Position */
+            top: 5vh;
+        }
+
+        /* 
+        
+            Triangle de gauche 
+        
+        */
+        .triangle .left {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 100%, 0 0, 50% 50%);
+            /* Image du triangle */
+            background-image: url('img/Get the shot black.png');
+            /* Couverture de l'image dans zone du triangle */
+            background-size: cover;
+            /* Positionnement de la photo dans le triangle (si elle est supérieur à la taille du triangle) */
+            background-position: right 20% bottom 20%;
+            background-repeat: no-repeat;
+        }
+
+        /* Gestion du texte */
+        .triangle .left span{
+            position: absolute;
+            /* Positionnement par rapport à la page */
+            top: 46%;
+            left: 25%;
+            /* Police d'écriture */
+            font-family: Potsdam;
+            /* Taille du texte */
+            font-size: 48px;
+            /* Couleur du texte */
+            color: #ffffff;
+            /* Ombre derrière le texte */
+            text-shadow: 5px 5px 8px #000000;
+        }
+
+
+        /* 
+        
+            Triangle de droite 
+        
+        */
+        .triangle .right {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+            /* Image du triangle */
+            background-image: url('img/Printing black.png');
+            /* Couverture de l'image dans zone du triangle */
+            background-size: cover;
+            /* Positionnement de la photo dans le triangle (si elle est supérieur à la taille du triangle) */
+            background-position: right 10% bottom 10%;
+            background-repeat: no-repeat;
+        }
+        
+        /* Gestion du texte */
+        .triangle .right span{
+            position: absolute;
+            /* Largeur du texte */
+            width: 10%;
+            /* Positionnement par rapport à la page */
+            top: 45%;
+            right: 20%;
+            /* Police d'écriture */
+            font-family: Potsdam;
+            /* Positionnement du texte par rapport à lui même */
+            text-align: center;
+            /* Taille du texte */
+            font-size: 48px;
+            /* Couleur du texte */
+            color: #ffffff;
+            /* Ombre derrière le texte */
+            text-shadow: 5px 5px 8px #000000;
+
+        }
+
+
+        /* 
+        
+        Triangle du bas 
+        
+        */
+        .triangle .bottom {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+            /* Image du triangle */
+            background-image: url('img/Vinyle store black.png');
+            /* Couverture de l'image dans zone du triangle */
+            background-size: cover;
+            /* Positionnement de la photo dans le triangle (si elle est supérieur à la taille du triangle) */
+            background-position: bottom;
+            background-repeat: no-repeat;
+
+        }
+
+        /* Gestion du texte */
+        .triangle .bottom span{
+            position: absolute;
+            font-family: Potsdam;
+            /* Positionnement par rapport à la page */
+            bottom: 50%;
+            margin-left: 40%;
+            margin-right: 40%;
+            /* Positionnement du texte par rapport à lui même */
+            text-align: center;
+            /* Taille du texte */
+            font-size: 48px;
+            /* Couleur du texte */
+            color: #ffffff;
+            /* Ombre derrière le texte */
+            text-shadow: 5px 5px 8px #000000;
+        }
+
+        /* Gestion des icônes sous le texte */
+        .triangle .bottom img{
+            /* Gestion de son alignement */
+            display: block;
+            /* Taille de l'image */
+            width: 40%;
+            /* Positionnement du l'image */
+            margin: 0 auto;
+        }
+
+
+
+        /* 
+
+            Animation du texte au passage de la souris 
+        
+        */
+        .bottom:hover span,
+        .left:hover span,
+        .right:hover span{
+            /* Rapidité de l'animation (avec les compatibilités navigateurs) */
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            /* Couleur vers laquelle le texte doit se transformer */
+            color: #c88a3f;
+        }
+
+
+
+        /* 
+        
+            Animation des images au passage de la souris 
+        
+        */
+        /* Triangle de gauche */
+        .left:hover{
+            /* Image du triangle après animation */
+            background-image: url('img/Get the shot.jpg');
+            /* Positionnement de la photo dans le triangle (si elle est supérieur à la taille du triangle) */
+            background-position: right 20% bottom 20%;
+            background-repeat: no-repeat;
+            /* Rapidité de l'animation (avec les compatibilités navigateurs) */
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+        }
+
+
+        /* Triangle de droite */
+        .right:hover{
+            /* Image du triangle après animation */
+            background-image: url('img/Printing.jpg');
+            background-position: right 10% bottom 10%;
+            background-repeat: no-repeat;
+            /* Rapidité de l'animation (avec les compatibilités navigateurs) */
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+        }
+
+
+        /* Triangle du bas */
+        .bottom:hover{
+            /* Image du triangle après animation */
+            background-image: url('img/Vinyle store.jpg');
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            /* Rapidité de l'animation (avec les compatibilités navigateurs) */
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+        }
+
+
+
+
+        /* 
+        
+            Gestion du responsive 
+        
+        */
+        /* Ecran qui font moins de 1024px */
+        @media only screen and (max-device-width:1024px) {
+            /* Texte du triangle de gauche */
+            .triangle .left span{
+                /* Position du texte */
+                left: 20%;
+                /* Taille du texte */
+                font-size: 38px;
+            }
+
+
+            /* Texte du triangle de droite */
+            .triangle .right span{
+                /* Position du texte */
+                right: 15%;
+                /* Taille du texte */
+                font-size: 38px;
+            }
+
+
+            /* Texte du triangle du bas */
+            .triangle .bottom span{
+                /* Position du texte */
+                bottom: 40%;
+                /* Taille du texte */
+                font-size: 38px;
+            }
+        }
+
+
+        /* Ecran qui font moins de 768px */
+        @media only screen and (max-device-width:768px) {
+            /* Texte du triangle de gauche */
+            .triangle .left span{
+                /* Position du texte */
+                left: 20%;
+                /* Taille du texte */
+                font-size: 32px;
+            }
+
+
+            /* Texte du triangle de droite */
+            .triangle .right span{
+                /* Position du texte */
+                right: 15%;
+                /* Taille du texte */
+                font-size: 32px;
+            }
+
+
+            /* Texte du triangle du bas */
+            .triangle .bottom span{
+                /* Position du texte */
+                left: 40%;
+                /* Taille du texte */
+                font-size: 32px;
+            }
+        }
+
+
+        /* Ecran qui font moins de 425px */
+        @media only screen and (max-device-width:425px) {
+            /* Texte du triangle de gauche */
+            .triangle .left span{
+                /* Position du texte */
+                left: 15%;
+                /* Taille du texte */
+                font-size: 28px;
+            }
+
+
+            /* Texte du triangle de droite */
+            .triangle .right span{
+                /* Position du texte */
+                right: 15%;
+                /* Taille du texte */
+                font-size: 28px;
+            }
+
+
+            /* Texte du triangle du bas */
+            .triangle .bottom span{
+                /* Position du texte */
+                bottom: 40%;
+                /* Taille du texte */
+                font-size: 28px;
+            }
+            /* Image du triangle du bas */
+            .triangle .bottom img{
+                /* Taille de l'image */
+                width: 100%;
+            }
+        }
+
+    /* 
+    Fin STYLE : Module Header 
+        By Axel Mazel
+            V1.0
+    */
+    </style>
+</body>
+</html>
